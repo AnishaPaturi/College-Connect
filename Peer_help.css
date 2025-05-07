@@ -1,160 +1,104 @@
-/* Base styling */
-body {
-    font-family: 'Inter', sans-serif;
+/* Make page use full height and layout footer at the bottom */
+html, body {
+    height: 100%;
     margin: 0;
-    padding: 0;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Inter', sans-serif;
     overflow-x: hidden;
     position: relative;
-}
-
-/* Navbar styling */
-.navbar {
-    background-color: #063678; /* Light pastel blue */
-    padding: 10px 20px;
-}
-
-.navbar a {
-    color: #ffffff; /* White text */
+  }
+  
+  /* Ensure main content grows to fill space */
+  body > main {
+    flex: 1 0 auto;
+  }
+  
+  /* Navbar enhancement */
+  .navbar {
+    background-color: #063678;
+    padding: 12px 24px;
+    border-radius: 0 0 15px 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  
+  .navbar a {
+    color: #ffffff;
     font-weight: 600;
     margin-right: 15px;
     text-decoration: none;
-}
-
-.navbar a:hover {
-    color: #FFABAB; /* Light pink hover effect */
+  }
+  
+  .navbar a:hover {
+    color: #FFABAB;
     text-decoration: underline;
-}
-
-/* Add floating pastel bubbles animation */
-.bubble {
-    position: absolute;
-    border-radius: 50%;
-    background-color: rgba(41, 117, 142, 0.8); /* Light pastel orange */
-    animation: floatBubble 10s ease-in-out infinite;
-    z-index: 0;
-}
-
-.bubble:nth-child(2) {
-    background-color: rgba(9, 39, 163, 0.8); /* Light pastel green */
-}
-
-.bubble:nth-child(3) {
-    background-color: rgba(4, 81, 24, 0.8); /* Light pastel blue */
-}
-
-.bubble:nth-child(4) {
-    background-color: rgba(98, 3, 119, 0.8); /* Light pastel purple */
-}
-
-/* Bubble animation */
-@keyframes floatBubble {
-    0% {
-        transform: translateX(0) translateY(0) scale(0.5);
-        opacity: 1;
-    }
-    50% {
-        transform: translateX(200px) translateY(-200px) scale(1.2);
-        opacity: 0.6;
-    }
-    100% {
-        transform: translateX(-200px) translateY(200px) scale(0.5);
-        opacity: 1;
-    }
-}
-
-/* Custom bubble sizes and positions */
-.bubble:nth-child(1) {
-    width: 100px;
-    height: 100px;
-    top: 50%;
-    left: 10%;
-    animation-duration: 15s;
-}
-
-.bubble:nth-child(2) {
-    width: 120px;
-    height: 120px;
-    top: 40%;
-    left: 30%;
-    animation-duration: 12s;
-}
-
-.bubble:nth-child(3) {
-    width: 80px;
-    height: 80px;
-    top: 60%;
-    left: 60%;
-    animation-duration: 18s;
-}
-
-.bubble:nth-child(4) {
-    width: 90px;
-    height: 90px;
-    top: 20%;
-    left: 80%;
-    animation-duration: 20s;
-}
-
-/* Header Section */
-.header {
-    background-color: #e6eed6; /* Light pastel teal */
-    padding: 30px;
+  }
+  
+  /* Header styling */
+  .header {
+    background: linear-gradient(to right, #e6eed6, #d0f0c0);
+    padding: 60px 20px;
     text-align: center;
-    border-bottom: 2px solid #abbdff; /* Light pastel pink */
     position: relative;
     z-index: 1;
-}
-
-.header h1 {
-    color: #2A6F97; /* Medium blue text */
-    font-weight: 600;
-}
-
-.header p {
-    font-size: 1.1rem;
-    color: #5D6F71; /* Soft grey text */
-}
-
-/* Custom Button Style */
-.btn-custom {
-    background-color: #c72f2f; /* Light pastel pink button */
+  }
+  
+  .header h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #2A6F97;
+    margin-bottom: 20px;
+  }
+  
+  .header p {
+    font-size: 1.25rem;
+    color: #5D6F71;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  /* Card upgrades */
+  .card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 15px;
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  }
+  
+  /* Button upgrades */
+  .btn-custom {
+    background-color: #c72f2f;
     color: #fff;
     font-weight: 600;
-    border-radius: 20px;
-    padding: 10px 20px;
-}
-
-.btn-custom:hover {
-    background-color: #F4978E; /* Slightly darker pastel pink */
-}
-
-/* Footer Section */
-.footer {
-    background-color: #010f0f; /* Light pastel aqua */
-    color: #f8f5f8; /* Dark teal */
-    padding: 10px 0;
-    position: relative;
-    z-index: 1;
-}
-
-.footer a {
-    color: #8c061a; /* Vibrant pastel red */
-    text-decoration: none;
-}
-
-.footer a:hover {
-    text-decoration: underline;
-}
-
-/* Container for cards and content */
-.container {
-    position: relative;
-    z-index: 2;
-}
-
-/* Main gradient background animation */
-.main-bg {
-    background: linear-gradient(45deg, #FFC4C4, #B5EAEA, #FFDD94, #FFABAB); /* Pastel gradient */
+    border-radius: 25px;
+    padding: 12px 24px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .btn-custom:hover {
+    background-color: #ff6464;
+    transform: scale(1.05);
+  }
+  
+  /* Footer styling */
+  .footer {
+    flex-shrink: 0;
+    margin-top: auto;
+    background-color: #010f0f;
+    color: #f8f5f8;
+    padding: 20px 0;
+    font-size: 0.95rem;
+  }
+  
+  /* Background gradient animation */
+  .main-bg {
+    background: linear-gradient(45deg, #FFC4C4, #B5EAEA, #FFDD94, #FFABAB);
     background-size: 400% 400%;
     animation: gradientAnimation 15s ease infinite;
     position: absolute;
@@ -163,17 +107,86 @@ body {
     right: 0;
     bottom: 0;
     z-index: -1;
-}
-
-/* Keyframes for gradient animation */
-@keyframes gradientAnimation {
+  }
+  
+  @keyframes gradientAnimation {
     0% {
-        background-position: 0% 50%;
+      background-position: 0% 50%;
     }
     50% {
-        background-position: 100% 50%;
+      background-position: 100% 50%;
     }
     100% {
-        background-position: 0% 50%;
+      background-position: 0% 50%;
     }
-}
+  }
+  
+  /* Floating bubbles */
+  .bubble {
+    position: absolute;
+    border-radius: 50%;
+    opacity: 0.2;
+    filter: blur(2px);
+    animation: floatBubble 10s ease-in-out infinite;
+    z-index: 0;
+  }
+  
+  @keyframes floatBubble {
+    0% {
+      transform: translateX(0) translateY(0) scale(0.5);
+      opacity: 1;
+    }
+    50% {
+      transform: translateX(200px) translateY(-200px) scale(1.2);
+      opacity: 0.6;
+    }
+    100% {
+      transform: translateX(-200px) translateY(200px) scale(0.5);
+      opacity: 1;
+    }
+  }
+  
+  .bubble:nth-child(1) {
+    width: 100px;
+    height: 100px;
+    top: 50%;
+    left: 10%;
+    animation-duration: 15s;
+  }
+  .bubble:nth-child(2) {
+    width: 120px;
+    height: 120px;
+    top: 40%;
+    left: 30%;
+    animation-duration: 12s;
+    background-color: rgba(9, 39, 163, 0.8);
+  }
+  .bubble:nth-child(3) {
+    width: 80px;
+    height: 80px;
+    top: 60%;
+    left: 60%;
+    animation-duration: 18s;
+    background-color: rgba(4, 81, 24, 0.8);
+  }
+  .bubble:nth-child(4) {
+    width: 90px;
+    height: 90px;
+    top: 20%;
+    left: 80%;
+    animation-duration: 20s;
+    background-color: rgba(98, 3, 119, 0.8);
+  }
+  
+  /* Responsive tweaks */
+  @media (max-width: 768px) {
+    .header h1 {
+      font-size: 2.25rem;
+    }
+  
+    .btn-custom {
+      width: 100%;
+      margin-top: 10px;
+    }
+  }
+  

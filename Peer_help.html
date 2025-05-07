@@ -1,116 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Peer Help</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
-    <link rel="icon" href="images/favicon.png" type="image/x-icon">
-    <link rel="stylesheet" href="Peer_help.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Peer Help</title>
+
+  <!-- Bootstrap + Fonts -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet"/>
+  <link rel="icon" href="images/favicon.png" type="image/x-icon" />
+  <link rel="stylesheet" href="Peer_help.css" />
 </head>
 <body>
-    <!-- Navbar Section -->
-    <nav class="navbar navbar-expand-lg navbar-dark">
-        <div class="container">
-            <a class="navbar-brand" href="#">Peer Help</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="canteen.html">Canteen</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="Event.html">Event Booking</a>
-                    </li>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="News.html">College News</a>
-                    </li>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container">
+      <a class="navbar-brand" href="#">Peer Help</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="canteen.html">Canteen</a></li>
+          <li class="nav-item"><a class="nav-link" href="Event.html">Event Booking</a></li>
+          <li class="nav-item"><a class="nav-link" href="News.html">College News</a></li>
+          <li class="nav-item"><a class="nav-link" href="company_listing.html">Company Listings</a></li>
+          <li class="nav-item"><a class="nav-link" href="Lost_and_found_.html">Lost and found</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 
-                    <li class="nav-item">
-                        <a class="nav-link" href="company_listing.html">Company Listings</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="Lost_and_found_.html">Lost and found</a>
-                    </li>
-                </ul>
+  <!-- Main animated gradient background -->
+  <div class="main-bg"></div>
+
+  <!-- Floating Bubbles -->
+  <div class="bubble"></div>
+  <div class="bubble"></div>
+  <div class="bubble"></div>
+  <div class="bubble"></div>
+
+  <!-- Header Section -->
+  <div class="header">
+    <h1>Peer Help</h1>
+    <p>Connect with peers for support and assistance. Join the community now!</p>
+  </div>
+
+  <!-- Main Content Wrapper -->
+  <main class="container mt-5">
+    <div class="row g-4">
+      <!-- Card 1 -->
+      <div class="col-md-6">
+        <div class="card shadow-sm" style="border: 1px solid #FFABAB;">
+          <div class="card-body">
+            <h5 class="card-title text-center" style="color: #2A6F97;">Request Peer Help</h5>
+            <p class="card-text text-center" style="color: #5D6F71;">Need assistance? Connect with a peer supporter in real-time.</p>
+            <div class="text-center">
+                <button class="btn btn-custom" id="requestHelpBtn">Request Help</button>
             </div>
+          </div>
         </div>
-    </nav>
+      </div>
 
-    <!-- Main animated gradient background -->
-    <div class="main-bg"></div>
-
-    <!-- Floating Bubbles -->
-    <div class="bubble"></div>
-    <div class="bubble"></div>
-    <div class="bubble"></div>
-    <div class="bubble"></div>
-
-    <!-- Header Section -->
-    <div class="header">
-        <h1>Peer Help</h1>
-        <p>Connect with peers for support and assistance. Join the community now!</p>
+      <!-- Card 2 -->
+      <div class="col-md-6">
+        <div class="card shadow-sm" style="border: 1px solid #B5EAEA;">
+          <div class="card-body">
+            <h5 class="card-title text-center" style="color: #2A6F97;">Provide Assistance</h5>
+            <p class="card-text text-center" style="color: #5D6F71;">Offer your support and help fellow students facing challenges.</p>
+            <div class="text-center">
+                <button class="btn btn-custom" id="becomeHelperBtn">Become a Helper</button>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
 
-    <!-- Card Section -->
-    <div class="container mt-5">
-        <div class="row g-4">
-            <!-- Card 1 -->
-            <div class="col-md-6">
-                <div class="card shadow-sm" style="border: 1px solid #FFABAB; border-radius: 15px;">
-                    <div class="card-body">
-                        <h5 class="card-title text-center" style="color: #2A6F97;">Request Peer Help</h5>
-                        <p class="card-text text-center" style="color: #5D6F71;">
-                            Need assistance? Connect with a peer supporter in real-time.
-                        </p>
-                        <div class="text-center">
-                            <button class="btn btn-custom">Request Help</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- Card 2 -->
-            <div class="col-md-6">
-                <div class="card shadow-sm" style="border: 1px solid #B5EAEA; border-radius: 15px;">
-                    <div class="card-body">
-                        <h5 class="card-title text-center" style="color: #2A6F97;">Provide Assistance</h5>
-                        <p class="card-text text-center" style="color: #5D6F71;">
-                            Offer your support and help fellow students facing challenges.
-                        </p>
-                        <div class="text-center">
-                            <button class="btn btn-custom">Become a Helper</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+    <!-- Why Peer Help Works Section -->
+    <div class="p-5 text-center mt-5" style="background-color: #e1f0d9; border-radius: 15px;">
+      <h2>Why Peer Help Works?</h2>
+      <p>
+        Peer Help fosters a supportive environment where students can share experiences and receive assistance.
+        Real-time chat ensures timely help, making campus life smoother.
+      </p>
+      <button class="btn btn-custom" id="getStartedBtn">Get Started</button>
     </div>
-    <div class="container mt-5">
-        <div class="p-5 text-center" style="background-color: #e1f0d9; border-radius: 15px;">
-            <h2>Why Peer Help Works?</h2>
-            <p>
-                Peer Help fosters a supportive environment where students can share experiences and receive assistance.
-                Real-time chat ensures timely help, making campus life smoother.
-            </p>
-            <button class="btn btn-custom">Get Started</button>
-        </div>
-    </div>
-<br><br>
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container text-center">
-            <p>© 2024 Peer Help - Empowering Campus Communities</p>
-        </div>
-    </footer>
+  </main>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container text-center">
+      <p>© 2024 Peer Help - Empowering Campus Communities</p>
+    </div>
+  </footer>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      document.getElementById("requestHelpBtn").addEventListener("click", function () {
+        alert("Feature coming soon: Request Peer Help!");
+      });
+  
+      document.getElementById("becomeHelperBtn").addEventListener("click", function () {
+        alert("Feature coming soon: Become a Helper!");
+      });
+  
+      document.getElementById("getStartedBtn").addEventListener("click", function () {
+        window.location.href = "register.html"; // Example redirect
+      });
+    });
+  </script>  
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
-

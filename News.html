@@ -1,59 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>News Page</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="News.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>News Page</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="News.css" />
+  <link rel="icon" href="images/favicon.png" type="image/x-icon">
 </head>
 <body>
-    <header class="bg-primary text-white text-center py-3">
-        <h1>College News</h1>
-        <p>Your source for class-specific and campus-wide updates</p>
-    </header>
+  <!-- Header -->
+  <header class="bg-primary text-white text-center py-3">
+    <h1>College News</h1>
+    <p>Your source for class-specific and global updates</p>
+  </header>
 
-    <div class="container my-4">
-        <div class="row">
-            <!-- Filter Section -->
-            <aside class="col-md-3">
-                <h5>Filters</h5>
-                <form id="filterForm">
-                    <div class="mb-3">
-                        <label for="category" class="form-label">Category</label>
-                        <select id="category" class="form-select">
-                            <option value="all">All</option>
-                            <option value="sports">Sports</option>
-                            <option value="academics">Academics</option>
-                            <option value="events">Events</option>
-                        </select>
-                    </div>
-                    <div class="mb-3">
-                        <label for="classSpecific" class="form-label">Class-Specific</label>
-                        <select id="classSpecific" class="form-select">
-                            <option value="all">All</option>
-                            <option value="classA">Class A</option>
-                            <option value="classB">Class B</option>
-                        </select>
-                    </div>
-                    <button type="button" id="applyFilter" class="btn btn-primary w-100">Apply Filter</button>
-                </form>
-            </aside>
+  <!-- Navigation Bar -->
+  <nav class="main-nav text-center py-3">
+    <a href="home.html">Home</a>
+    <a href="canteen.html">Canteen</a>
+    <a href="Event.html">Event Booking</a>
+    <a href="Lost_and_found_.html">Lost & Found</a>
+    <a href="company_listing.html">Company Listing</a>
+  </nav>
 
-            <!-- News Section -->
-            <main class="col-md-9">
-                <div id="newsContainer" class="row row-cols-1 row-cols-md-2 g-4">
-                    <!-- News articles will load here dynamically -->
-                </div>
-            </main>
+  <!-- Content Sections -->
+  <div class="container-fluid my-4">
+    <div class="row">
+      <!-- College News -->
+      <section class="col-md-6 border-end" id="collegeNewsSection">
+        <h4 class="text-primary mb-3">College News</h4>
+        <div id="collegeNewsContainer" class="row row-cols-1 g-3">
+          <!-- Dummy news will load here -->
         </div>
+      </section>
+
+      <!-- Live News -->
+      <section class="col-md-6" id="liveNewsSection">
+        <h4 class="text-success mb-3">Latest News</h4>
+        <div id="liveNewsContainer" class="row row-cols-1 g-3">
+          <!-- Fetched news will appear here -->
+        </div>
+      </section>
     </div>
+  </div>
 
-    <footer class="bg-primary text-white text-center py-2">
-        <p>&copy; 2024 College News Portal</p>
-    </footer>
+  <!-- Footer -->
+  <footer class="bg-primary text-white text-center py-2">
+    <p>&copy; 2024 College News Portal</p>
+  </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="script.js"></script>
+  <!-- Scripts -->
+  <script src="News.js"></script>
 </body>
 </html>
