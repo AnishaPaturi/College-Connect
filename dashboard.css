@@ -1,0 +1,212 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background: url('images/KMIT.png') no-repeat center center fixed;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Wrapper ensures footer placement at bottom */
+.wrapper {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header Styling */
+header {
+    color: #333;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+header h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    color: #000;
+    text-shadow: 1px 1px 3px rgba(255, 255, 255, 0.8);
+}
+
+header p {
+    font-size: 1.2rem;
+    margin: 0;
+    margin-bottom: 20px;
+    color: #444;
+    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.7);
+}
+
+/* Navbar Styling */
+.navbar {
+    margin: 0; /* Remove any margin */
+    position: fixed; /* Fix the navbar to the top right */
+    top: 20px; /* Adjust the top position */
+    right: 20px; /* Move the navbar to the right */
+    max-width: 1200px; /* Set the maximum width */
+    width: 180px; /* Adjust the width */
+    background-color: rgba(255, 255, 255, 0.85);
+    padding: 5px 15px; /* Reduced padding for a shorter height */
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Navbar Link Styling */
+.nav-link {
+    display: block;
+    padding: 5px 15px;
+    color: white;
+    background-color: #28a745;
+    border: 2px solid #28a745;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: bold;
+    border-radius: 20px;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+    background-color: #218838;
+    color: white;
+    border-color: #218838;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    gap: 10px;
+}
+
+.nav-item {
+    text-align: center;
+}
+
+/* Marquee Effect for Features */
+.features-container {
+    width: 100%;
+    background-color: rgba(173, 216, 230, 0.7); /* Light blue background */
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.features-container h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #28a745;
+}
+
+.features-list {
+    list-style-type: none;
+    padding: 0;
+    display: inline-block;
+    white-space: nowrap;
+    animation: marquee 20s linear infinite; /* Increased to 30s for slower speed */
+}
+
+.features-list li {
+    display: inline;
+    font-size: 1.1rem;
+    padding: 8px 20px;
+    white-space: nowrap;
+}
+
+.features-list li:hover {
+    background-color: #f0f0f0;
+}
+
+/* Cards Section Styling */
+.cards-container {
+    padding: 50px 0;
+}
+
+.card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: white;
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.8;
+}
+
+.card-body {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    padding: 20px;
+}
+
+.card:hover .card-body {
+    opacity: 1;
+}
+
+.card h5 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
+
+.card .btn {
+    background-color: #ff8c00;
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.card .btn:hover {
+    background-color: #e67e00;
+}
+
+/* Footer Styling */
+footer {
+    background: black;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+
+/* Marquee animation */
+@keyframes marquee {
+    0% {
+        transform: translateX(100%);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}

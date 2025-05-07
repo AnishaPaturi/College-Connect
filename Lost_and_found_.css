@@ -1,0 +1,195 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    color: #333;
+    background: url('images/student_move.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+header {
+    background: linear-gradient(90deg, #4e81f1, #45e619);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+nav {
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+    background-color: #003f7f;
+}
+
+.menu {
+    position: relative;
+    display: inline-block;
+}
+
+.menu-button {
+    background-color: #00b34b;
+    color: white;
+    padding: 15px 25px; 
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 18px; 
+    transition: background-color 0.3s ease;
+}
+
+.menu-button:hover {
+    background-color: #003f7f;
+}
+
+.menu-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    z-index: 1;
+    right: 0;
+}
+
+.menu-content button {
+    background-color: #fc0000; 
+    color: white; 
+    border: none;
+    padding: 15px 20px; 
+    text-align: left;
+    width: 100%;
+    cursor: pointer;
+    font-size: 16px; 
+    border-radius: 8px; 
+    transition: background-color 0.3s, transform 0.2s; 
+}
+
+.menu-content button:hover {
+    background-color: #45e619; 
+    transform: scale(1.05); 
+}
+
+.menu:hover .menu-content {
+    display: block;
+}
+
+main {
+    flex: 1;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    margin: 20px auto;
+    width: 90%;
+    max-width: 1200px;
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.card {
+    width: 300px;
+    height: 400px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    background: linear-gradient(135deg, #6bbffb, #ff758c);
+    color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.3);
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 2px solid white;
+}
+
+.card .details {
+    padding: 15px;
+    text-align: center;
+}
+
+.card .details button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #8a04ff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.card .details button:hover {
+    background-color: #45e619;
+}
+
+.search-bar {
+    margin: 20px auto;
+    display: none;
+    text-align: center;
+}
+
+.search-bar input[type="text"] {
+    padding: 10px;
+    width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.search-bar button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.search-bar button:hover {
+    background-color: #0056b3;
+}
+
+footer {
+    background: black;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: auto;
+    font-size: 14px;
+}

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lost and Found Board</title>
+    <link rel="stylesheet" href="Found.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Lost and Found Board</h1>
+        <div class="form-section">
+            <h2>Add a New Item</h2>
+            <form id="itemForm">
+                <label for="itemName">Item Name:</label>
+                <input type="text" id="itemName" placeholder="Enter the item name" required>
+                
+                <label for="itemDesc">Description:</label>
+                <textarea id="itemDesc" rows="3" placeholder="Describe the item in detail" required></textarea>
+
+                <label for="itemImage">Upload Image:</label>
+                <input type="file" id="itemImage" accept=".jpg, .png" required>
+
+                <button type="submit">Add Item</button>
+            </form>
+        </div>
+        <div class="board-section">
+            <h2>Board</h2>
+            <div id="board">
+                <p>No items added yet.</p>
+            </div>
+        </div>
+    </div>
+    <script>
+        const form = document.getElementById("itemForm");
+        const board = document.getElementById("board");
+
+        form.addEventListener("submit", (event) => {
+            event.preventDefault(); // Prevent form from refreshing the page
+
+            // Get input values
+            const itemName = document.getElementById("itemName").value;
+            const itemDesc = document.getElementById("itemDesc").value;
+            const itemImage = document.getElementById("itemImage").files[0];
+
+            // Check if the uploaded file is valid
+            if (!itemImage) {
+                alert("Please upload an image.");
+                return;
+            }
+            
+            const validTypes = ["image/jpeg", "image/png"];
+            if (!validTypes.includes(itemImage.type)) {
+                alert("Only .jpg and .png files are allowed.");
+                return;
+            }
+
+            // Create a reader to preview the image
+            const reader = new FileReader();
+            reader.onload = () => {
+                // Create a new board item
+                const item = document.createElement("div");
+                item.style.marginBottom = "20px";
+                item.innerHTML = `
+                    <strong>${itemName}</strong>
+                    <p>${itemDesc}</p>
+                    <img src="${reader.result}" alt="${itemName}">
+                `;
+                board.appendChild(item);
+
+                // Clear the form
+                form.reset();
+                if (board.textContent === "No items added yet.") {
+                    board.textContent = ""; // Remove default text
+                }
+            };
+
+            // Read the image file as a data URL
+            reader.readAsDataURL(itemImage);
+        });
+    </script>
+</body>
+</html>

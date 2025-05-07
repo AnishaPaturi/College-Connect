@@ -1,0 +1,60 @@
+body {
+    background-color: #f4f7fc;
+    font-family: 'Arial', sans-serif;
+    /*background-image: url('images/employees.jpg');*/
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    color: black; /* Text color to make it readable against the background */
+}
+
+h2 {
+    color: #d9534f; /* New header color */
+}
+
+.card {
+    margin-bottom: 20px;
+}
+
+.card-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.card-body {
+    background-color: #ecf0f1;
+}
+
+input[type="text"] {
+    margin-bottom: 10px;
+}
+
+footer {
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    background-color: black; /* Footer background color */
+    color: white; /* Footer text color */
+    padding: 10px 0; /* Optional padding */
+    text-align: center; /* Center the footer text */
+}
+
+#resume-upload {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Navbar customizations */
+.navbar {
+    background-color: #07393C !important; 
+}
+
+.navbar .nav-link {
+    color: white !important; 
+}
+
+.navbar .navbar-brand {
+    color: white !important;
+}

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="icon" href="favicon.png" type="image/jpg">
+    <link rel="stylesheet" href="Register.css">
+</head>
+<body>
+    <div class="form-container">
+        <div class="icon">
+            <img src="images/profile.png" alt="Profile Icon" class="icon-img">
+        </div>
+        
+        <h2>Registration</h2>
+        <form id="registrationForm">
+            <!-- Full Name Field -->
+            <div class="form-group">
+                <label for="fullname">Full Name</label>
+                <input type="text" id="fullname" placeholder="Full Name" required>
+                <div class="tooltip">Enter your full name</div>
+            </div>
+
+            <!-- Roll Number Field -->
+            <div class="form-group">
+                <label for="rollno">Roll Number</label>
+                <input type="text" id="rollno" placeholder="Roll Number" required>
+                <div class="tooltip">Enter your roll number</div>
+            </div>
+
+            <!-- Email Field -->
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="text" id="email" placeholder="Email" required>
+                <div class="tooltip">Enter a valid email address</div>
+            </div>
+
+            <!-- Phone Number Field -->
+            <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="text" id="phone" placeholder="+91 xxxxx xxxxx" required>
+                <div class="tooltip">Enter a valid phone number</div>
+            </div>
+
+            <!-- Password Field -->
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" placeholder="Password" required>
+                <div class="tooltip">Password must be at least 8 characters</div>
+            </div>
+
+            <!-- Confirm Password Field -->
+            <div class="form-group">
+                <label for="confirm-password">Confirm Password</label>
+                <input type="password" id="confirm-password" placeholder="Confirm Password" required>
+                <div class="tooltip">Re-enter your password</div>
+            </div>
+
+            <!-- Register Button -->
+            <button type="submit" class="register-btn">Register</button>
+        </form>
+
+        <!-- Login and Proceed Links -->
+        <div class="login-text">Already have an account? <a href="Login.html">Log in here</a></div>
+    </div>
+
+    <script src="Register.js"></script>
+</body>
+</html>

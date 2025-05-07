@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Event Booking</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="icon" href="images/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="Events.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="text-white p-3 shadow-sm">
+        <div class="container d-flex justify-content-between align-items-center">
+            <h1 class="logo">Campus Events</h1>
+            <nav>
+                <ul class="nav">
+                    <li class="nav-item"><a class="nav-link text-white" href="home.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="canteen.html">Canteen</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="news.html">College News</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="company_listing.html">Company Listing</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="Peer_help.html">Peer Help</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="lost_and_found_.html">Lost and Found</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <!-- Search Section -->
+    <section class="search-section py-5">
+        <div class="container text-center">
+            <h2 class="mb-4">Search for College Events</h2>
+            <form class="row g-3 justify-content-center">
+                <div class="col-md-3">
+                    <input type="text" class="form-control" placeholder="Event Name">
+                </div>
+                <div class="col-md-3">
+                    <input type="date" class="form-control">
+                </div>
+                <div class="col-md-3">
+                    <input type="text" class="form-control" placeholder="Location (e.g., Auditorium)">
+                </div>
+                <div class="col-md-1">
+                    <button class="btn btn-primary w-100">Search</button>
+                </div>
+            </form>
+        </div>
+    </section>
+    <!-- Featured College Events -->
+    <section class="event-card bg-light py-5">
+        <div class="container">
+            <h3 class="text-center mb-4">Upcoming College Events</h3>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="images/workshop.jpg" class="card-img-top" alt="Workshop">
+                        <div class="card-body">
+                            <h5 class="card-title">AI & Robotics Workshop</h5>
+                            <p class="card-text">Learn the basics of AI and Robotics with hands-on activities.</p>
+                            <a href="Register_event.html" class="btn btn-primary">Register</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="images/cultural.jpg" class="card-img-top" alt="Cultural Fest">
+                        <div class="card-body">
+                            <h5 class="card-title">Annual Cultural Fest</h5>
+                            <p class="card-text">Experience vibrant cultural performances and competitions.</p>
+                            <a href="Register_event.html" class="btn btn-primary">Register</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="images/sports.jpg" class="card-img-top" alt="Sports Event">
+                        <div class="card-body">
+                            <h5 class="card-title">Inter-College Sports Meet</h5>
+                            <p class="card-text">Compete in exciting sports events and showcase your skills.</p>
+                            <a href="Register_event.html" class="btn btn-primary">Register</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 College Event Booking System</p>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

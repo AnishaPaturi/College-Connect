@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign Up</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="icon" href="images/favicon.png" type="image/x-icon">
+  <link rel="stylesheet" href="Register_event.css">
+</head>
+<body>
+  <section class="form-section">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-md-6">
+          <div class="card shadow">
+            <div class="card-header">
+              Sign Up
+            </div>
+            <div class="card-body">
+              <form id="signupForm">
+                <div class="mb-3">
+                  <label for="username" class="form-label">Full Name</label>
+                  <input type="text" class="form-control" id="username" placeholder="Enter your full name" 
+                    data-bs-toggle="tooltip" title="Enter your full name (at least 3 characters)" required>
+                  <small class="error" id="usernameError"></small>
+                </div>
+                <div class="mb-3">
+                  <label for="roll-no" class="form-label">Roll No.</label>
+                  <input type="text" class="form-control" id="roll-no" placeholder="Enter your roll number" 
+                    data-bs-toggle="tooltip" title="Enter your unique roll number (alphanumeric)" required>
+                  <small class="error" id="rollNoError"></small>
+                </div>
+                <div class="mb-3">
+                  <label for="email" class="form-label">Email</label>
+                  <input type="email" class="form-control" id="email" placeholder="Enter your email" 
+                    data-bs-toggle="tooltip" title="Provide a valid email address" required>
+                  <small class="error" id="emailError"></small>
+                </div>
+                <div class="mb-3">
+                  <label for="password" class="form-label">Password</label>
+                  <input type="password" class="form-control" id="password" placeholder="Create a password" 
+                    data-bs-toggle="tooltip" title="Password must be at least 6 characters long" required>
+                  <small class="error" id="passwordError"></small>
+                </div>
+                <div class="mb-3">
+                  <label for="confirm-password" class="form-label">Confirm Password</label>
+                  <input type="password" class="form-control" id="confirm-password" placeholder="Confirm your password" 
+                    data-bs-toggle="tooltip" title="Re-enter the same password" required>
+                  <small class="error" id="confirmPasswordError"></small>
+                </div>
+                <div class="d-grid">
+                  <button type="submit" class="btn btn-primary">Sign Up</button>
+                </div>
+              </form>
+              <p class="text-center mt-3">Already have an account? <a href="login.html">Log in here</a>.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="Register_event.css"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+</body>
+</html>

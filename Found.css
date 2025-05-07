@@ -1,0 +1,99 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #e3f2fd; /* Light Blue Background */
+}
+
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 12px;
+    border-top: 5px solid #42a5f5; /* Accent Border */
+}
+
+h1 {
+    text-align: center;
+    color: #1976d2; /* Vibrant Blue */
+}
+
+h2 {
+    color: #0288d1; /* Deep Blue */
+    margin-bottom: 10px;
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+    color: #1565c0; /* Blue */
+}
+
+input, textarea, button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+input:focus, textarea:focus {
+    outline: none;
+    border-color: #64b5f6; /* Lighter Blue */
+    box-shadow: 0 0 4px #64b5f6;
+}
+
+button {
+    background-color: #ff7043; /* Vibrant Orange */
+    color: white;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: all 0.3s ease-in-out;
+}
+
+button:hover {
+    background-color: #d84315; /* Darker Orange */
+    transform: scale(1.05);
+}
+
+.board-section {
+    margin-top: 20px;
+}
+
+.board-section #board {
+    border: 2px dashed #64b5f6; /* Dashed Border */
+    border-radius: 8px;
+    padding: 15px;
+    background-color: #e1f5fe; /* Light Blue Background */
+}
+
+.board-section div {
+    background-color: #ffffff; /* White card for each item */
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 15px;
+}
+
+strong {
+    color: #f4511e; /* Orange */
+}
+
+p {
+    color: #37474f; /* Dark Grey */
+    margin: 5px 0;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    border: 2px solid #64b5f6; /* Light Blue Border */
+    margin-top: 10px;
+}

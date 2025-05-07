@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Company Listings</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="images/favicon.png" type="image/x-icon">
+    <style>
+                
+    </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Company listings</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="Home.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#canteen">Canteen</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Event.html">Event Registration</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#college-news">College News</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Peer_help.html">Peer Help</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Lost_and_found_.html">Lost and Found</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+
+    <!-- Company Listings Section -->
+    <section id="company-listings" class="container mt-5">
+        <h2>Company Listings</h2>
+
+        <!-- Job Filters -->
+        <div class="row">
+            <div class="col-md-6">
+                <input type="text" id="search-bar" class="form-control" placeholder="Search for companies, roles, etc.">
+            </div>
+            <div class="col-md-6">
+                <button class="btn btn-primary">Apply Filters</button>
+            </div>
+        </div>
+
+        <div class="row mt-4" id="company-cards">
+            <!-- Company Card Examples will be populated dynamically -->
+        </div>
+    </section>
+
+    <!-- Resume Upload Section -->
+    <section id="resume-upload" class="container mt-5">
+        <h2>Upload Your Resume</h2>
+        <form id="upload-form">
+            <div class="mb-3">
+                <label for="resume-file" class="form-label">Select Resume (PDF/DOCX)</label>
+                <input type="file" class="form-control" id="resume-file" accept=".pdf, .docx" required>
+            </div>
+            <button type="submit" class="btn btn-success">Upload Resume</button>
+        </form>
+    </section>
+
+    <!-- Job Suggestions Section -->
+    <section id="job-suggestions" class="container mt-5">
+        <h2>Suggested Jobs Based on Your Resume</h2>
+        <div id="suggested-jobs-list">
+            <!-- Dynamically generated job suggestions will go here -->
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-3">
+        <p>&copy; 2024 College Connect. All rights reserved.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="company_listing.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Canteen Pre-Order</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="icon" href="images/favicon.png" type="image/x-icon">
+    <style>
+
+        body {
+            font-family: Arial, sans-serif;
+            background: url('images/canteen_bg.jpg') no-repeat center center fixed;
+            background-size: cover;
+            height: 100vh;
+            margin: 0;
+        }
+    
+        .navbar {
+            background-color: rgba(0, 105, 217, 0.9); /* Slight transparency for better visibility */
+            padding: 10px;
+        }
+    
+        .container {
+            background-color: rgba(255, 255, 255, 0.9); /* Add slight background for content visibility */
+            border-radius: 10px;
+            padding: 20px;
+        }
+
+        .navbar a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+        }
+
+        .cart-icon {
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        .cart-count {
+            background-color: red;
+            color: white;
+            font-size: 0.9rem;
+            border-radius: 50%;
+            padding: 2px 6px;
+            margin-left: 5px;
+        }
+
+        .menu-item-card {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 15px;
+            margin: 10px;
+            text-align: center;
+        }
+
+        .menu-item-card img {
+            max-width: 100%;
+            border-radius: 5px;
+        }
+
+        .menu-item-card .btn-cart {
+            margin-top: 10px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <a href="Home.html">Home</a>
+        <a href="Event.html">Event Booking</a>
+        <a href="news.html">College News</a>
+        <a href="company_listing.html">Company Listing</a>
+        <a href="Peer_help.html">Peer Help</a>
+        <a href="Lost_and_found_.html">Lost and Found</a>        
+        <div class="cart-icon" onclick="viewCart()">🛒<span id="cartCount" class="cart-count">0</span></div>
+    </div>
+
+    <div class="container mt-4">
+        <div class="row">
+            <div class="col">
+                <div class="menu-item-card">
+                    <h5>Milk with Cornflake</h5>
+                    <img src="images/milk_with_conflakes.jpg" alt="Milk with Cornflake">
+                    <p>₹50</p>
+                    <button class="btn-cart" onclick="addToCart('Milk with Cornflake', 50)">Add to Cart</button>
+                </div>
+            </div>
+            <div class="col">
+                <div class="menu-item-card">
+                    <h5>Masala Dosa</h5>
+                    <img src="images/masaladosa.jpg" alt="Masala Dosa">
+                    <div class="price">₹60</div>
+                    <button class="btn-cart" onclick="addToCart('Masala Dosa', 60)">Add to Cart</button>
+                </div>
+            </div>
+            <div class="col">
+                <div class="menu-item-card">
+                    <h5>Poha & Roti</h5>
+                    <img src="images/poha.jpg" alt="Poha & Roti">
+                    <div class="price">₹40</div>
+                    <button class="btn-cart" onclick="addToCart('Poha  & Roti', 40)">Add to Cart</button>
+                </div>
+            </div>
+            <div class="col">
+                <div class="menu-item-card">
+                    <h5>Dal Tadka</h5>
+                    <img src="images/dal.jpg" alt="Dal Tadka">
+                    <div class="price">₹70</div>
+                    <button class="btn-cart" onclick="addToCart('Dal Tadka', 70)">Add to Cart</button>
+                </div>
+            </div>
+            <div class="col">
+                <div class="menu-item-card">
+                    <h5>Chicken Biryani</h5>
+                    <img src="images/biryani.jpg" alt="Chicken Biryani">
+                    <div class="price">₹150</div>
+                    <button class="btn-cart" onclick="addToCart('Chicken Biryani', 150)">Add to Cart</button>
+                </div>
+            </div>
+            <div class="col">
+                <div class="menu-item-card">
+                    <h5>Rasgulla</h5>
+                    <img src="images/rasagulla.jpg" alt="Rasgulla">
+                    <div class="price">₹30</div>
+                    <button class="btn-cart" onclick="addToCart('Rasgulla', 30)">Add to Cart</button>
+                </div>
+            </div>
+            <div class="col">
+                <div class="menu-item-card">
+                    <h5>Idli</h5>
+                    <img src="images/idli.jpg" alt="Idli">
+                    <div class="price">₹30</div>
+                    <button class="btn-cart" onclick="addToCart('Idli', 30)">Add to Cart</button>
+                </div>
+            </div>
+            <div class="col">
+                <div class="menu-item-card">
+                    <h5>Masala Egg Chowmin & Roti Dal</h5>
+                    <img src="images/egg_chowmein.jpg" alt="Masala Egg Chowmin & Roti Dal">
+                    <div class="price">₹60</div>
+                    <button class="btn-cart" onclick="addToCart('Masala Egg Chowmin & Roti Dal', 60)">Add to Cart</button>
+                </div>
+            </div>
+            <div class="col">
+                <div class="menu-item-card">
+                    <h5>Tatka</h5>
+                    <img src="images/tadka.jpg" alt="Tatka">
+                    <div class="price">₹40</div>
+                    <button class="btn-cart" onclick="addToCart('Tatka', 40)">Add to Cart</button>
+                </div>
+            </div>
+            <div class="col">
+                <div class="menu-item-card">
+                    <h5>Chola Bhatura & Plain Roti</h5>
+                    <img src="images/chole_batura.jpg" alt="Chola Bhatura & Plain Roti">
+                    <div class="price">₹50</div>
+                    <button class="btn-cart" onclick="addToCart('Chola Bhatura & Plain Roti', 50)">Add to Cart</button>
+                </div>
+            </div>
+            <div class="col">
+                <div class="menu-item-card">
+                    <h5>Fruit Salad</h5>
+                    <img src="images/fruit_salad.jpg" alt="Fruit Salad">
+                    <div class="price">₹50</div>
+                    <button class="btn-cart" onclick="addToCart('Fruit Salad', 50)">Add to Cart</button>
+                </div>
+            </div>
+            <div class="col">
+                <div class="menu-item-card">
+                    <h5>Tea/Coffee</h5>
+                    <img src="images/tea.jpg" alt="Tea/Coffee">
+                    <div class="price">₹20</div>
+                    <button class="btn-cart" onclick="addToCart('Tea', 20)">Add to Cart</button>
+                </div>
+            </div>
+            <div class="col">
+                <div class="menu-item-card">
+                    <h5>Laccha Parata & Plain</h5>
+                    <img src="images/Parata.jpg" alt="Laccha Parata & Plain">
+                    <div class="price">₹35</div>
+                    <button class="btn-cart" onclick="addToCart('Laccha Parata & Plain', 35)">Add to Cart</button>
+                </div>
+            </div>
+            <div class="col">
+                <div class="menu-item-card">
+                    <h5>Roti with Ghogni</h5>
+                    <img src="images/Ghogni.jpg" alt="Roti with Ghogni">
+                    <div class="price">₹30</div>
+                    <button class="btn-cart" onclick="addToCart('Roti with Ghogni', 30)">Add to Cart</button>
+                </div>
+            </div>
+            <div class="col">
+                <div class="menu-item-card">
+                    <h5>Salad & Papad</h5>
+                    <img src="IMAGES/Salad.jpg" alt="Salad & Papad">
+                    <div class="price">₹25</div>
+                    <button class="btn-cart" onclick="addToCart('Salad', 25)">Add to Cart</button>
+                </div>
+            </div>
+            <div class="col">
+                <div class="menu-item-card">
+                    <h5>Mix Raita & Papad</h5>
+                    <img src="images/mix_raita.jpg" alt="Mix Raita & Papad">
+                    <div class="price">₹30</div>
+                    <button class="btn-cart" onclick="addToCart('Mix Raita', 30)">Add to Cart</button>
+                </div>
+            </div>
+            <div class="col">
+                <div class="menu-item-card">
+                    <h5>Rice & Chapati</h5>
+                    <img src="images/Chapati.jpg" alt="Rice & Chapati">
+                    <div class="price">₹50</div>
+                    <button class="btn-cart" onclick="addToCart('Chapati', 50)">Add to Cart</button>
+                </div>
+            </div>
+            <div class="col">
+                <div class="menu-item-card">
+                    <h5>Onion Masoor Dal</h5>
+                    <img src="images/Onion_Masoor_Dal.jpg" alt="Onion Masoor Dal">
+                    <div class="price">₹40</div>
+                    <button class="btn-cart" onclick="addToCart('Onion Masoor Dal', 40)">Add to Cart</button>
+                </div>
+            </div>
+            <div class="col">
+                <div class="menu-item-card">
+                    <h5>Masala Garlic Dal</h5>
+                    <img src="images/Masala_Garlic_Dal.jpg" alt="Masala Garlic Dal">
+                    <div class="price">₹45</div>
+                    <button class="btn-cart" onclick="addToCart('Masala Garlic Dal', 45)">Add to Cart</button>
+                </div>
+            </div>
+            <div class="col">
+                <div class="menu-item-card">
+                    <h5>Tomato Chutney & Curd</h5>
+                    <img src="images/Tomato_chutney.jpg" alt="Tomato Chutney & Curd">
+                    <div class="price">₹20</div>
+                    <button class="btn-cart" onclick="addToCart('Tomato Chutney', 20)">Add to Cart</button>
+                </div>
+            </div>
+           
+        </div>
+    </div>
+
+    <div class="text-center mt-4">
+        <button class="btn btn-primary" onclick="redirectToBilling()">Proceed to Checkout</button>
+    </div>
+
+    <script>
+        let cartItems = [];
+        let cartCount = 0;
+
+        function addToCart(name, price) {
+            cartItems.push({ name, price });
+            cartCount++;
+            document.getElementById('cartCount').textContent = cartCount;
+        }
+
+        function redirectToBilling() {
+            const totalAmount = cartItems.reduce((total, item) => total + item.price, 0);
+            const orderNumber = 'ORD' + Math.floor(Math.random() * 10000);
+
+            document.body.innerHTML = `
+                <div class="container mt-5">
+                    <h2>Billing Page</h2>
+                    <p>Total Amount: ₹${totalAmount}</p>
+                    <p>Order Number: ${orderNumber}</p>
+                    <label for="paymentMethod">Payment Method:</label>
+                    <select id="paymentMethod" class="form-select">
+                        <option value="" disabled selected>Select a payment method</option>
+                        <option value="Cash">Cash</option>
+                        <option value="Card">Card</option>
+                    </select>
+                    <button class="btn btn-success mt-3" onclick="confirmPayment()">Confirm Payment</button>
+                </div>
+            `;
+        }
+
+        function confirmPayment() {
+            const paymentMethod = document.getElementById('paymentMethod').value;
+            if (!paymentMethod) {
+                alert('Please select a payment method');
+                return;
+            }
+
+            document.body.innerHTML = `
+                <div class="container text-center mt-5">
+                    <h3>Payment Successful!</h3>
+                    <p>Your order will be ready in 20 minutes.</p>
+                    <p>Payment Method: ${paymentMethod}</p>
+                    <button class="btn btn-primary" onclick="restart()">Go Back to Menu</button>
+                </div>
+            `;
+        }
+
+        function restart() {
+            location.reload();
+        }
+    </script>
+</body>
+</html>

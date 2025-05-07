@@ -1,0 +1,23 @@
+body {
+    background-color: #f8f9fa;
+}
+
+header {
+    background-color: #007bff;
+}
+
+footer {
+    background-color: #0056b3;
+}
+
+aside {
+    border-right: 2px solid #ddd;
+    padding-right: 15px;
+}
+
+.news-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px;
+    background-color: #fff;
+}

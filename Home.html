@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>College Connect</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="Home.css">
+  <link rel="icon" href="images/favicon.png" type="image/x-icon">
+</head>
+
+<body>
+  <!-- Wrapper -->
+  <div class="wrapper">
+    <!-- Header Section -->
+    <header>
+      <div class="container">
+        <h1>College Connect</h1>
+        <p>Your Gateway to Campus Life</p>
+      </div>
+
+      <!-- Navigation Bar -->
+      <nav class="navbar">
+        <ul class="nav-menu">
+          <li class="nav-item">
+            <a href="#" class="nav-link" onclick="redirectToLogin()">Login</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link" onclick="redirectToSignup()">Sign-Up</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Marquee Features Section -->
+    <div class="features-container">
+      <h2>Special Features</h2>
+      <ul class="features-list">
+        <li>Access campus news and updates in real-time.</li>
+        <li>Book tickets for events and activities on campus.</li>
+        <li>Find job listings and internships from top companies.</li>
+        <li>Explore food options at the campus canteen.</li>
+        <li>Connect with peers for academic collaboration and help.</li>
+        <li>Report or find lost items with ease.</li>
+      </ul>
+    </div>
+
+    <!-- Main Content Section -->
+    <main class="cards-container container">
+      <div class="row g-4 justify-content-center">
+        <!-- Canteen Card -->
+        <div class="col-md-3">
+          <div class="card">
+            <img src="images/canteen_image.jpg" alt="Canteen">
+            <div class="card-body">
+              <h5>Canteen</h5>
+              <p>Explore our variety of food options at the college canteen.</p>
+              <a href="canteen.html" class="btn">Visit Canteen</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Event Booking Card -->
+        <div class="col-md-3">
+          <div class="card">
+            <img src="images/event_booking_image.jpg" alt="Event Booking">
+            <div class="card-body">
+              <h5>Event Booking</h5>
+              <p>Book tickets for upcoming campus events easily.</p>
+              <a href="Event.html" class="btn">Book Now</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- College News Card -->
+        <div class="col-md-3">
+          <div class="card">
+            <img src="images/college_news_image.jpg" alt="College News">
+            <div class="card-body">
+              <h5>College News</h5>
+              <p>Stay updated with the latest news from campus.</p>
+              <a href="college_news.html" class="btn">Read News</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row g-4 justify-content-center">
+        <!-- Company Listing Card -->
+        <div class="col-md-3">
+          <div class="card">
+            <img src="images/company_listing_image.jpg" alt="Company Listing">
+            <div class="card-body">
+              <h5>Company Listings</h5>
+              <p>Find job listings and internships from top companies.</p>
+              <a href="company_listing.html" class="btn">Explore Jobs</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Peer Help Section -->
+        <div class="col-md-3">
+          <div class="card">
+            <img src="images/peer_help_image.jpg" alt="Peer Help">
+            <div class="card-body">
+              <h5>Peer Help</h5>
+              <p>Collaborate with peers to get or offer academic assistance.</p>
+              <a href="peer_help.html" class="btn">Join Now</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Lost and Found Card -->
+        <div class="col-md-3">
+          <div class="card">
+            <img src="images/lost_Found.png" alt="Lost and Found">
+            <div class="card-body">
+              <h5>Lost and Found</h5>
+              <p>Report or find lost items on campus with ease.</p>
+              <a href="Lost_and_found_.html" class="btn">View Board</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2024 College Connect. All Rights Reserved.</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- JavaScript for Redirecting to Login and Signup Pages -->
+  <script src="Home.js"></script>
+</body>
+
+</html>
