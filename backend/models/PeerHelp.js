@@ -1,0 +1,1 @@
+const mongoose = require('mongoose'); const PeerHelpSchema = new mongoose.Schema({}); module.exports = mongoose.model('PeerHelp', PeerHelpSchema);

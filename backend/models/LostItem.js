@@ -1,0 +1,1 @@
+const mongoose = require('mongoose'); const LostItemSchema = new mongoose.Schema({}); module.exports = mongoose.model('LostItem', LostItemSchema);
