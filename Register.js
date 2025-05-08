@@ -13,22 +13,26 @@ document.getElementById('registrationForm').addEventListener('submit', function 
         return;
     }
 
-    // Send data to the server
-    fetch('http://localhost:5000/register', {
+    // Send data to the backend
+    fetch('http://localhost:5000/api/users', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
         },
         body: JSON.stringify({ fullname, rollno, email, phone, password }),
     })
-        .then((response) => response.json())
-        .then((data) => {
-            if (data.message === 'Registration successful') {
-                alert(data.message);
-                window.location.href = 'dashboard.html';
-            } else {
-                alert(data.message);
-            }
-        })
-        .catch((error) => console.error('Error:', error));
+    .then((response) => {
+        if (!response.ok) {
+            throw new Error("Registration failed");
+        }
+        return response.json();
+    })
+    .then((data) => {
+        alert("Registration successful!");
+        window.location.href = 'dashboard.html';
+    })
+    .catch((error) => {
+        console.error('Error:', error);
+        alert("Registration failed. Please try again.");
+    });
 });
