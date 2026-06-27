@@ -12,9 +12,9 @@ app.use(express.json());
 // Serve static files from frontend directory
 app.use(express.static(path.join(__dirname, "../frontend")));
 
-// Route root path to home.html
+// Route root path to index.html
 app.get("/", (req, res) => {
-  res.sendFile(path.join(__dirname, "../frontend/home.html"));
+  res.sendFile(path.join(__dirname, "../frontend/index.html"));
 });
 
 // Connect to MongoDB

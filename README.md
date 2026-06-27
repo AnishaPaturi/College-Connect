@@ -84,5 +84,5 @@ Make sure you have [Node.js](https://nodejs.org/) installed.
 
 ### Running the Frontend
 1. Open the `frontend` folder.
-2. Launch `home.html` in any modern web browser, or use a local development server (such as Live Server in VS Code) to serve the `frontend/` directory.
+2. Launch `index.html` in any modern web browser, or use a local development server (such as Live Server in VS Code) to serve the `frontend/` directory.
 3. The frontend is pre-configured to communicate with the backend API running at `http://localhost:5000/api`.
