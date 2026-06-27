@@ -9,7 +9,8 @@ document.getElementById("loginForm").addEventListener("submit", function (e) {
         return;
     }
 
-    fetch("http://localhost:5000/api/users/login", {
+    const API_URL = window.location.protocol === 'file:' ? 'http://localhost:5000' : '';
+    fetch(`${API_URL}/api/users/login`, {
         method: "POST",
         headers: {
             "Content-Type": "application/json"

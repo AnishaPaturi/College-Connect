@@ -14,7 +14,8 @@ document.getElementById('registrationForm').addEventListener('submit', function 
     }
 
     // Send data to the backend
-    fetch('http://localhost:5000/api/users', {
+    const API_URL = window.location.protocol === 'file:' ? 'http://localhost:5000' : '';
+    fetch(`${API_URL}/api/users`, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',

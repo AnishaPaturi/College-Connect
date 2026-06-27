@@ -3,9 +3,19 @@ const mongoose = require("mongoose");
 const cors = require("cors");
 require("dotenv").config();
 
+const path = require("path");
+
 const app = express();
 app.use(cors());
 app.use(express.json());
+
+// Serve static files from frontend directory
+app.use(express.static(path.join(__dirname, "../frontend")));
+
+// Route root path to home.html
+app.get("/", (req, res) => {
+  res.sendFile(path.join(__dirname, "../frontend/home.html"));
+});
 
 // Connect to MongoDB
 mongoose.connect(process.env.MONGO_URI, {
